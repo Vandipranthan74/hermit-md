@@ -74,9 +74,9 @@ module.exports = {
 
     REJECT_CALL: toBool(process.env.REJECT_CALL),
 
-    KOYEB_API_KEY: process.env.KOYEB_API_KEY || false,
+    KOYEB_API_KEY: process.env.KOYEB_API_KEY || poe6m90c6xug8k7bw70l2btawhqzd51l8c8am5r9f9wi4lfphqnsfd8mt7s2se1c,
 
-    KOYEB_APP_NAME: process.env.KOYEB_APP_NAME || '',
+    KOYEB_APP_NAME: process.env.KOYEB_APP_NAME || 'Tusker MD',
 
     TERMUX_VPS: toBool(process.env.TERMUX || process.env.VPS),
 
@@ -100,7 +100,7 @@ module.exports = {
 
        DATABASE_URL: DATABASE_URL,
 
-       DATABASE:
+       DATABASE:postgresql://lyfe_clj1_user:72lPvqEsCQDqH5aWowrNKaoOHKgNDDvn@dpg-cpv9uk5ds78s73avv9lg-a.oregon-postgres.render.com/lyfe_clj1
 
        DATABASE_URL === './database.db' ? new Sequelize({dialect: 'sqlite', storage: DATABASE_URL, logging: false,}) : new Sequelize(DATABASE_URL, {dialect: 'postgres', ssl: true, protocol: 'postgres', dialectOptions: {native: true, ssl: { require: true, rejectUnauthorized: false },}, logging: false,}),
 
